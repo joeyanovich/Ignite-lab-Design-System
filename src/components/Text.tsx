@@ -1,3 +1,4 @@
+import { Slot } from '@radix-ui/react-slot';
 import { clsx } from 'clsx';
 export interface TextProps {
     size?: 'sm' | 'md' | 'lg';
@@ -10,9 +11,9 @@ export function Text({ size = 'md', children }: TextProps) {
             className={clsx(
                 'text-gray-100 font-sans', 
                 {
-                    'text-sx': size === 'sm',
+                    'text-xs': size === 'sm',
                     'text-sm': size === 'md',
-                    'text-lg': size === 'lg',
+                    'text-md': size === 'lg',
                 })}
             >
                 {children}
